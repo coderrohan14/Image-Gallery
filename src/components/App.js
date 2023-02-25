@@ -6,7 +6,6 @@ import ImageGallery from "./ImageGallery";
 import SearchSection from "./SearchSection";
 import ImagePopUp from "./ImagePopUp";
 import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
 
 function App() {
   const [trigger, result] = useLazyGetSearchResultsQuery();
@@ -41,9 +40,9 @@ function App() {
           <ImageGallery itemData={result.data.results} openPopUp={openPopUp} />
         )}
         {result.isLoading && (
-          <Box sx={{ display: "flex" }}>
+          <div className="progress-bar">
             <CircularProgress />
-          </Box>
+          </div>
         )}
         {result.isError && (
           <div className="error-msg">No results found, please try again.</div>

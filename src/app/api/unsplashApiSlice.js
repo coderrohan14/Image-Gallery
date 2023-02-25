@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseUrl = "https://api.unsplash.com";
-const access_key = process.env.REACT_APP_ACCESS_KEY;
+const access_key = "Wj5HNMEjuRzDBFCgYNxK0U02jZHeY8b3vEzaJbo8-qg";
 
 export const unsplashApiSlice = createApi({
   reducerPath: "api",
